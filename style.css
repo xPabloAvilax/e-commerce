@@ -1,3 +1,32 @@
 .menu-left{
-    
+    margin-top: 30px;
+    height: 400px;
+    border: 1px solid #2d572c;
+    width: 300px;
+    border-radius: 10px;
+    box-shadow: 15px -16px teal;
+    background-color: #F0D3A6;
 }
+
+.title-categories{
+    font-size: 30px;
+    text-align: center;
+    
+
+}
+.list-container{
+    list-style: none;
+    text-align: center;
+    margin-right: 40px;
+}
+.list-container li  {
+    font-size: 20px;
+    padding-top: 10px;
+    text-decoration: none;
+}
+.list-container a{
+    text-decoration: none;
+    color: #000000;
+
+}
+
