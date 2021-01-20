@@ -5,40 +5,40 @@ class Producto{
     stock = 0;
     cantidadSeleccionada = 0;
     
-    function obtenerCodigo(){
+    obtenerCodigo(){
         return this.titulo;
     }
-    function obtenerTitulo(){
+    obtenerTitulo(){
         return this.titulo;
     }
-    function obtenerPrecio(){
+    obtenerPrecio(){
         return  this.precio;
     }
-    function obtenerStock(){
+    obtenerStock(){
         return  this.precio;
     }
-    function obtenerCantidadSeleccionada(){
+    obtenerCantidadSeleccionada(){
         return  this.cantidadSeleccionada;
     }
-    function modificarCodigo(){
+    modificarCodigo(){
         return this.titulo;
     }
-    function modificarTitulo(){
+    modificarTitulo(){
         return this.titulo;
     }
-    function modificarPrecio(){
+    modificarPrecio(){
         return  this.precio;
     }
-    function modificarStock(){
+    modificarStock(){
         return  this.precio;
     }
-    function modificarCantidadSeleccionada(){
+    modificarCantidadSeleccionada(){
         return  this.cantidadSeleccionada;
     }
-    function agregarUnidad(){
+    agregarUnidad(){
         this.cantidadSeleccionada++;
     }
-    function restarUnidad(){
+    restarUnidad(){
         this.cantidadSeleccionada--;
     }
  
