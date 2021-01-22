@@ -1,5 +1,5 @@
 /* BODY */
-* {
+body {
     margin: 0;
     box-sizing: border-box;
 }
@@ -75,4 +75,52 @@
     color: #000000;
 
 }
-
+.main-priductos{
+    float: right;
+    display: flex;
+    background-color: rgb(245, 245, 245);
+    flex-wrap: wrap;
+}
+.producto{
+    background-color: rgb(230, 227, 227);
+    width: 300px;
+    margin: 10px;
+    height: 50%;
+}
+.nombre-p{
+    font-size: 25px;
+    text-align: center;
+    position: relative;
+    bottom: 5px;
+}
+.imagen-p{
+    position: relative;
+    bottom: 15px;
+    margin-left: 12%;
+    width: 75%;
+}
+.nombre-precio{
+    position: relative;
+    bottom: 20px;
+    font-size: 23px;
+    margin-left: 12%;
+}
+.btn-add{
+    float: right;
+    position: relative;
+    bottom: 30px;
+    right: 50px;
+}
+.btn-remove{
+    float: right;
+    position: relative;
+    bottom: 30px;
+    right: 30px;
+}
+.cantidad{
+    background-color: white;
+    bottom: 30px;
+    position: relative; 
+    left: 55%;
+    font-size: 20px;
+}
