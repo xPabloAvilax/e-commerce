@@ -4,7 +4,10 @@ class Producto{
     precio = 0;
     stock = 0;
     cantidadSeleccionada = 0;
-    
+    constructor(codigo,cantidadSeleccionada){
+        this.codigo = codigo;
+        this.cantidadSeleccionada=cantidadSeleccionada;
+    }   
     obtenerCodigo(){
         return this.titulo;
     }
@@ -44,7 +47,7 @@ class Producto{
  
 }
 class Carrito{
-    productos[];
+    productos=[];
     usuario=0;
     fecha="";
     hora="";
@@ -59,28 +62,37 @@ class Usuario{
     direccion="";
 }
 function agregarProducto(codigo_producto){
-    carrito[carrito.find(producto => producto.codigo === codigo_producto)].agregarUnidad();
+    if (typeof carritoCompra.productos.find(producto => producto.codigo == codigo_producto) === 'undefined'){
+        let nuevoProducto = new Producto(codigo_producto,1);
+        carritoCompra.productos.push(nuevoProducto);
+        alert("Producto nuevo agregado");
+    }else{
+        carritoCompra.productos.find(producto => producto.codigo == codigo_producto).agregarUnidad();
+        alert("Cantidad agregada");  
+    }
 }
-function restarProducto(codigo_producto){
-    carrito[carrito.find(producto => producto.codigo === codigo_producto)].restarUnidad();
+function removerProducto(codigo_producto){
+    if (typeof carritoCompra.productos.find(producto => producto.codigo == codigo_producto) === 'undefined'){
+        alert("No se puede remover producto por no estar en el carrito.");
+    }else{
+        carritoCompra.productos.find(producto => producto.codigo == codigo_producto).restarUnidad();
+        alert("Cantidad restada");  
+    }
 }
+/*
 function finalizarCompra(carrito){
-    carrito.fecha = D
-}
+    
+}*/
 
-var Carrito = new Carrito();
-
+var carritoCompra = new Carrito();
 let botonesSuma = document.getElementsByClassName("btn-add");
-
-suma.array.forEach(element => {
-    element.addEventListener("click",agregarProducto(element.codigo_producto));
-});
+Array.from(botonesSuma).forEach((boton)=>boton.addEventListener("click",agregarProducto(boton.getAttribute("codigo_producto"))));
+console.log(carritoCompra);
 let botonesResta = document.getElementsByClassName("btn-remove");
-suma.array.forEach(element => {
-    element.addEventListener("click",restarProducto(element.codigo_producto));
-});
+Array.from(botonesResta).forEach((boton)=>boton.addEventListener("click",removerProducto(boton.getAttribute("codigo_producto"))));
+console.log(carritoCompra);
 
-let botonComprar = document.getElementById("btn-purchase");
-botonComprar = document.addEventListener("click",finalizarCompra());
+/*let botonComprar = document.getElementById("btn-purchase");
+botonComprar = document.addEventListener("click",finalizarCompra());*/
 
 
